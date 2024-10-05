@@ -13,7 +13,7 @@ namespace Licitacao.API.Controllers
     public class LoteController(ILoteService service) : Controller
     {
         [HttpGet]
-        [SwaggerOperation("busca o lote no banco")]
+        [SwaggerOperation("busca todos os lotes")]
         [ProducesResponseType(typeof(IEnumerable<int>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll()
         {
@@ -28,16 +28,16 @@ namespace Licitacao.API.Controllers
         }
 
         [HttpPost]
-        [SwaggerOperation("cria o lote no banco")]
+        [SwaggerOperation("cria os lotes")]
         [ProducesResponseType(typeof(IEnumerable<int>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> Create([FromBody] LoteCreateModel model)
+        public IActionResult Create([FromBody] List<LoteCreateModel> models)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var result = await service.CreateAsync(model);
+            var result = service.Create(models);
 
             return Ok(result);
         }

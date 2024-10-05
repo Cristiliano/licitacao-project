@@ -25,23 +25,14 @@ namespace Licitacao.Infraestructure.Repositories
         {
             if (entities.Count == 0) return;
 
-            int batchSize = 10; 
-            var tasks = new List<Task>();
+            int batchSize = 10;
 
             for (int i = 0; i < entities.Count; i += batchSize)
             {
                 var batch = entities.Skip(i).Take(batchSize).ToList();
 
-                tasks.Add(Task.Run(() =>
-                {
-                    batch.ForEach(async b =>
-                    {
-                        await _dbSet.AddAsync(b);
-                    });
-                }));
+                await _dbSet.AddRangeAsync(batch);
             }
-
-            await Task.WhenAll(tasks);
         }
 
         public T Update(T entity)
@@ -64,11 +55,14 @@ namespace Licitacao.Infraestructure.Repositories
         {
             if (ids.Count == 0) return false;
 
-            List<T> entities = [];
-            foreach(var id in ids)
+            List<T> entities = new List<T>();
+            foreach (var id in ids)
             {
                 var entity = await _dbSet.FindAsync(id);
-                entities.Add(entity!);
+                if (entity != null)
+                {
+                    entities.Add(entity);
+                }
             }
 
             if (entities.Count == 0) return false;

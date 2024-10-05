@@ -61,32 +61,44 @@ namespace Licitacao.Application.Services
             }
         }
 
-        public async Task<LoteEntity?> CreateAsync(LoteCreateModel model)
+        public List<LoteEntity>? Create(List<LoteCreateModel> models)
         {
             try
             {
-                var loteMapperCreate = LoteMapper.LoteCreateMapper(model);
+                if (models.Count == 0) return null;
 
-                var lote = LoteMapper.LoteCreateToLoteEntityMapper(model);
+                List<LoteEntity> lotes = [];
 
-                if (lote is null) return null;
+                models.ForEach(async item =>
+                {
+                    var lote = await AddLote(item);
+                    lotes.Add(lote!);
+                });
 
-                var loteEntityId = loteRepository.AddAsync(lote).Result.Id;
-
-                await AddCotacoes(loteMapperCreate, loteEntityId);
-                await AddInternets(loteMapperCreate, loteEntityId);
-                await AddPrecosEstimados(loteMapperCreate, loteEntityId);
-                await AddPrecosPublicos(loteMapperCreate, loteEntityId);
-
-                await unitOfWork.CommitAsync();
-
-                return lote;
+                return lotes;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 throw;
             }
+
+        }
+        private async Task<LoteEntity?> AddLote(LoteCreateModel model)
+        {
+            var loteMapperCreate = LoteMapper.LoteCreateMapper(model);
+
+            var lote = LoteMapper.LoteCreateToLoteEntityMapper(model);
+            if (lote is null) return null;
+
+            var loteEntityId = loteRepository.AddAsync(lote).Result.Id;
+
+            await AddCotacoes(loteMapperCreate, loteEntityId);
+            await AddInternets(loteMapperCreate, loteEntityId);
+            await AddPrecosEstimados(loteMapperCreate, loteEntityId);
+            await AddPrecosPublicos(loteMapperCreate, loteEntityId);
+
+            return lote;
         }
 
         public async Task<bool> RemoveByIdAsync(Guid loteId)

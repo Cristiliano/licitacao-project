@@ -6,7 +6,7 @@ namespace Licitacao.Application.Interfaces
     public interface ILoteService
     {
         Task<List<LoteEntity?>> GetAllAsync();
-        Task<LoteEntity?> CreateAsync(LoteCreateModel model);
+        List<LoteEntity>? Create(List<LoteCreateModel> models);
         Task<bool> RemoveByIdAsync(Guid loteId);
     }
 }
