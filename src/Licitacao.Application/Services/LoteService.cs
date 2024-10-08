@@ -18,44 +18,11 @@ namespace Licitacao.Application.Services
         {
             try
             {
-                var lotes = await loteRepository.GetAllAsync();
-                var loteIds = lotes.Select(l => l.Id).ToList();
-
-                if (lotes.Count == 0) return [];
-
-                var cotacoes = await cotacaoRepository.GetAllAsync();
-                var cotacoesToLoteIdList = cotacoes.Where(c => loteIds.Contains(c.LoteId)).ToList();
-
-                var internets = await internetRepository.GetAllAsync();
-                var internetsToLoteIdList = internets.Where(c => loteIds.Contains(c.LoteId)).ToList();
-                
-                var precoEstimados = await precoEstimadoRepository.GetAllAsync();
-                var precoEstimadosToLoteIdList = precoEstimados.Where(c => loteIds.Contains(c.LoteId)).ToList();
-                
-                var precopublicos = await precoPublicoRepository.GetAllAsync();
-                var precoPublicosToLoteIdList = precopublicos.Where(c => loteIds.Contains(c.LoteId)).ToList();
-
-                List<LoteEntity> lotesResponse = [];
-                foreach (var item in lotes)
-                {
-                    var listCotacoes = cotacoesToLoteIdList.Where(c => c.LoteId == item.Id).ToList();
-                    listCotacoes.ForEach(item.Cotacoes!.Add);
-
-                    var listInternets = internetsToLoteIdList.Where(c => c.LoteId == item.Id).ToList();
-                    listInternets.ForEach(item.Internets!.Add);
-
-                    var listPrecoEstimados = precoEstimadosToLoteIdList.Where(c => c.LoteId == item.Id).ToList();
-                    listPrecoEstimados.ForEach(item.PrecosEstimados!.Add);
-
-                    var listPrecoPublicos = precoPublicosToLoteIdList.Where(c => c.LoteId == item.Id).ToList();
-                    listPrecoPublicos.ForEach(item.PrecosPublicos!.Add);
-
-                    lotesResponse.Add(item);
-                }
+                var lotes = await loteRepository.GetAllLotesAsync();
 
                 await unitOfWork.CommitAsync();
 
-                return lotesResponse!;
+                return lotes!;
             }
             catch (Exception ex)
             {
