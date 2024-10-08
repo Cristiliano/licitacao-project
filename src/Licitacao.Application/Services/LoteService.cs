@@ -2,7 +2,8 @@
 using Licitacao.Domain.Entities;
 using Licitacao.Domain.Interfaces;
 using Licitacao.Domain.Mappers;
-using Licitacao.Domain.Models;
+using Licitacao.Domain.Models.Creates;
+using Licitacao.Domain.Models.Updates;
 
 namespace Licitacao.Application.Services
 {
@@ -20,7 +21,7 @@ namespace Licitacao.Application.Services
                 var lotes = await loteRepository.GetAllAsync();
                 var loteIds = lotes.Select(l => l.Id).ToList();
 
-                if (!lotes.Any()) return [];
+                if (lotes.Count == 0) return [];
 
                 var cotacoes = await cotacaoRepository.GetAllAsync();
                 var cotacoesToLoteIdList = cotacoes.Where(c => loteIds.Contains(c.LoteId)).ToList();
@@ -52,6 +53,8 @@ namespace Licitacao.Application.Services
                     lotesResponse.Add(item);
                 }
 
+                await unitOfWork.CommitAsync();
+
                 return lotesResponse!;
             }
             catch (Exception ex)
@@ -61,7 +64,7 @@ namespace Licitacao.Application.Services
             }
         }
 
-        public List<LoteEntity>? Create(List<LoteCreateModel> models)
+        public async Task<List<LoteEntity>?> CreateAsync(List<LoteCreateModel> models)
         {
             try
             {
@@ -75,6 +78,8 @@ namespace Licitacao.Application.Services
                     lotes.Add(lote!);
                 });
 
+                await unitOfWork.CommitAsync();
+
                 return lotes;
             }
             catch (Exception ex)
@@ -82,25 +87,32 @@ namespace Licitacao.Application.Services
                 Console.WriteLine(ex.Message);
                 throw;
             }
-
         }
-        private async Task<LoteEntity?> AddLote(LoteCreateModel model)
+
+        public async Task<List<LoteUpdateModel>?> UpdateAsync(List<LoteUpdateModel> models)
         {
-            var loteMapperCreate = LoteMapper.LoteCreateMapper(model);
+            try
+            {
+                if (models.Count == 0) return null;
 
-            var lote = LoteMapper.LoteCreateToLoteEntityMapper(model);
-            if (lote is null) return null;
+                List<LoteUpdateModel> lotes = [];
+                models.ForEach( item =>
+                {
+                    var lote = UpdateLote(item);
+                    lotes.Add(lote!);
+                });
 
-            var loteEntityId = loteRepository.AddAsync(lote).Result.Id;
+                await unitOfWork.CommitAsync();
 
-            await AddCotacoes(loteMapperCreate, loteEntityId);
-            await AddInternets(loteMapperCreate, loteEntityId);
-            await AddPrecosEstimados(loteMapperCreate, loteEntityId);
-            await AddPrecosPublicos(loteMapperCreate, loteEntityId);
-
-            return lote;
+                return lotes;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
         }
-
+        
         public async Task<bool> RemoveByIdAsync(Guid loteId)
         {
             try
@@ -121,6 +133,38 @@ namespace Licitacao.Application.Services
                 Console.WriteLine(ex.Message);
                 throw;
             }
+        }
+
+        private LoteUpdateModel UpdateLote(LoteUpdateModel model)
+        {
+            var lote = LoteMapper.LoteUpdateToLoteEntityMapper(model);
+            loteRepository.Update(lote);
+
+            var loteEntity = LoteMapper.LoteUpdateMapper(model);
+
+            UpdateCotacoes(loteEntity);
+            UpdateInternets(loteEntity);
+            UpdatePrecosEstimados(loteEntity);
+            UpdatePrecosPublicos(loteEntity);
+
+            return model;
+        }
+
+        private async Task<LoteEntity?> AddLote(LoteCreateModel model)
+        {
+            var loteMapperCreate = LoteMapper.LoteCreateMapper(model);
+
+            var lote = LoteMapper.LoteCreateToLoteEntityMapper(model);
+            if (lote is null) return null;
+
+            var loteEntityId = loteRepository.AddAsync(lote).Result.Id;
+
+            await AddCotacoes(loteMapperCreate, loteEntityId);
+            await AddInternets(loteMapperCreate, loteEntityId);
+            await AddPrecosEstimados(loteMapperCreate, loteEntityId);
+            await AddPrecosPublicos(loteMapperCreate, loteEntityId);
+
+            return lote;
         }
 
         private async Task RemovePrecoPublicos(Guid loteId)
@@ -163,40 +207,76 @@ namespace Licitacao.Application.Services
             await cotacaoRepository.DeleteAllByIdAsync(cotacoesToRemovedId);
         }
 
-        private async Task AddCotacoes(LoteEntity loteMapperCreate, Guid loteEntityId)
+        private async Task AddCotacoes(LoteEntity entity, Guid loteEntityId)
         {
-            var cotacoes = loteMapperCreate.Cotacoes?
-                                    .Select(c => { c.LoteId = loteEntityId; return c; })
-                                    .ToList() ?? [];
+            var cotacoes = entity.Cotacoes?
+                                 .Select(c => { c.LoteId = loteEntityId; return c; })
+                                 .ToList() ?? [];
 
             await cotacaoRepository.AddListAsync(cotacoes);
         }
 
-        private async Task AddInternets(LoteEntity loteMapperCreate, Guid loteEntityId)
+        private async Task AddInternets(LoteEntity entity, Guid loteEntityId)
         {
-            var internets = loteMapperCreate.Internets?
-                                    .Select(i => { i.LoteId = loteEntityId; return i; })
-                                    .ToList() ?? [];
+            var internets = entity.Internets?
+                                  .Select(i => { i.LoteId = loteEntityId; return i; })
+                                  .ToList() ?? [];
 
             await internetRepository.AddListAsync(internets);
         }
 
-        private async Task AddPrecosEstimados(LoteEntity loteMapperCreate, Guid loteEntityId)
+        private async Task AddPrecosEstimados(LoteEntity entity, Guid loteEntityId)
         {
-            var precoEstimados = loteMapperCreate.PrecosEstimados?
-                                        .Select(p => { p.LoteId = loteEntityId; return p; })
-                                        .ToList() ?? [];
+            var precoEstimados = entity.PrecosEstimados?
+                                       .Select(p => { p.LoteId = loteEntityId; return p; })
+                                       .ToList() ?? [];
 
             await precoEstimadoRepository.AddListAsync(precoEstimados);
         }
 
-        private async Task AddPrecosPublicos(LoteEntity loteMapperCreate, Guid loteEntityId)
+        private async Task AddPrecosPublicos(LoteEntity entity, Guid loteEntityId)
         {
-            var precosPublicos = loteMapperCreate.PrecosPublicos?
-                                        .Select(p => { p.LoteId = loteEntityId; return p; })
-                                        .ToList() ?? [];
+            var precosPublicos = entity.PrecosPublicos?
+                                       .Select(p => { p.LoteId = loteEntityId; return p; })
+                                       .ToList() ?? [];
 
             await precoPublicoRepository.AddListAsync(precosPublicos);
+        }
+
+        private List<CotacaoEntity>? UpdateCotacoes(LoteEntity entity)
+        {
+            var cotacoes = entity.Cotacoes?.ToList();
+
+            if (cotacoes?.Count == 0) return default;
+
+            return cotacaoRepository.UpdateList(cotacoes!);
+        }
+
+        private List<InternetEntity>? UpdateInternets(LoteEntity entity)
+        {
+            var internets = entity.Internets?.ToList();
+
+            if (internets?.Count == 0) return default;
+
+            return internetRepository.UpdateList(internets!);
+        }
+
+        private List<PrecoEstimadoEntity>? UpdatePrecosEstimados(LoteEntity entity)
+        {
+            var precoEstimados = entity.PrecosEstimados?.ToList();
+
+            if (precoEstimados?.Count == 0) return default;
+
+            return precoEstimadoRepository.UpdateList(precoEstimados!);
+        }
+
+        private List<PrecoPublicoEntity>? UpdatePrecosPublicos(LoteEntity entity)
+        {
+            var precoPublicos = entity.PrecosPublicos?.ToList();
+
+            if (precoPublicos?.Count == 0) return default;
+
+            return precoPublicoRepository.UpdateList(precoPublicos!);
         }
     }
 }

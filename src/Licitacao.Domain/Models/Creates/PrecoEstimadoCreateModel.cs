@@ -1,4 +1,4 @@
-﻿namespace Licitacao.Domain.Models
+﻿namespace Licitacao.Domain.Models.Creates
 {
     public class PrecoEstimadoCreateModel
     {

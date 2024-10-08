@@ -1,5 +1,7 @@
 ﻿using Licitacao.Application.Interfaces;
-using Licitacao.Domain.Models;
+using Licitacao.Domain.Entities;
+using Licitacao.Domain.Models.Creates;
+using Licitacao.Domain.Models.Updates;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -14,8 +16,8 @@ namespace Licitacao.API.Controllers
     {
         [HttpGet]
         [SwaggerOperation("busca todos os lotes")]
-        [ProducesResponseType(typeof(IEnumerable<int>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAll()
+        [ProducesResponseType(typeof(IEnumerable<LoteEntity>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetAllAsync()
         {
             if (!ModelState.IsValid)
             {
@@ -30,22 +32,37 @@ namespace Licitacao.API.Controllers
         [HttpPost]
         [SwaggerOperation("cria os lotes")]
         [ProducesResponseType(typeof(IEnumerable<int>), StatusCodes.Status200OK)]
-        public IActionResult Create([FromBody] List<LoteCreateModel> models)
+        public async Task<IActionResult> CreateAsync([FromBody] List<LoteCreateModel> models)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var result = service.Create(models);
+            var result = await service.CreateAsync(models);
+
+            return Ok(result);
+        }
+
+        [HttpPut]
+        [SwaggerOperation("atualiza os lotes")]
+        [ProducesResponseType(typeof(IEnumerable<List<LoteUpdateModel>?>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> UpdateListAsync([FromBody] List<LoteUpdateModel> models)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await service.UpdateAsync(models);
 
             return Ok(result);
         }
 
         [HttpDelete("{guid:guid}")]
         [SwaggerOperation("deleta o lote no banco")]
-        [ProducesResponseType(typeof(IEnumerable<int>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> Delete([FromRoute] Guid guid)
+        [ProducesResponseType(typeof(IEnumerable<bool>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> DeleteAsync([FromRoute] Guid guid)
         {
             if (!ModelState.IsValid)
             {

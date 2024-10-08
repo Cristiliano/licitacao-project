@@ -41,6 +41,20 @@ namespace Licitacao.Infraestructure.Repositories
             return entity;
         }
 
+        public List<T> UpdateList(List<T> entities)
+        {
+            int batchSize = 10;
+
+            for (int i = 0; i < entities.Count; i += batchSize)
+            {
+                var batch = entities.Skip(i).Take(batchSize).ToList();
+
+                _dbSet.UpdateRange(batch);
+            }
+
+            return entities;
+        }
+
         public async Task<bool> DeleteAsync(Guid id)
         {
             var entity = await _dbSet.FindAsync(id);
@@ -55,7 +69,8 @@ namespace Licitacao.Infraestructure.Repositories
         {
             if (ids.Count == 0) return false;
 
-            List<T> entities = new List<T>();
+            List<T> entities = [];
+
             foreach (var id in ids)
             {
                 var entity = await _dbSet.FindAsync(id);
@@ -77,7 +92,7 @@ namespace Licitacao.Infraestructure.Repositories
             return item!;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }
