@@ -84,12 +84,7 @@ namespace Licitacao.Application.Services
         {
             try
             {
-                await RemoveCotacoes(loteId);
-                await RemoveInternets(loteId);
-                await RemovePrecosEstimados(loteId);
-                await RemovePrecoPublicos(loteId);
-
-                var result = await loteRepository.DeleteAsync(loteId);
+                var result = await loteRepository.DeleteLoteAsync(loteId);
 
                 await unitOfWork.CommitAsync();
 
@@ -132,46 +127,6 @@ namespace Licitacao.Application.Services
             await AddPrecosPublicos(loteMapperCreate, loteEntityId);
 
             return lote;
-        }
-
-        private async Task RemovePrecoPublicos(Guid loteId)
-        {
-            var precosPublicos = await precoPublicoRepository.GetAllAsync();
-            var precosPublicosToRemovedId = precosPublicos.Where(i => i.LoteId == loteId)
-                                                          .Select(i => i.Id)
-                                                          .ToList();
-
-            await precoPublicoRepository.DeleteAllByIdAsync(precosPublicosToRemovedId);
-        }
-
-        private async Task RemovePrecosEstimados(Guid loteId)
-        {
-            var precoEstimados = await precoEstimadoRepository.GetAllAsync();
-            var precoEstimadosToRemovedId = precoEstimados.Where(i => i.LoteId == loteId)
-                                                          .Select(i => i.Id)
-                                                          .ToList();
-
-            await precoEstimadoRepository.DeleteAllByIdAsync(precoEstimadosToRemovedId);
-        }
-
-        private async Task RemoveInternets(Guid loteId)
-        {
-            var internets = await internetRepository.GetAllAsync();
-            var internetsToRemovedId = internets.Where(i => i.LoteId == loteId)
-                                                .Select(i => i.Id)
-                                                .ToList();
-
-            await internetRepository.DeleteAllByIdAsync(internetsToRemovedId);
-        }
-
-        private async Task RemoveCotacoes(Guid loteId)
-        {
-            var cotacoes = await cotacaoRepository.GetAllAsync();
-            var cotacoesToRemovedId = cotacoes.Where(c => c.LoteId == loteId)
-                                              .Select(c => c.Id)
-                                              .ToList();
-
-            await cotacaoRepository.DeleteAllByIdAsync(cotacoesToRemovedId);
         }
 
         private async Task AddCotacoes(LoteEntity entity, Guid loteEntityId)

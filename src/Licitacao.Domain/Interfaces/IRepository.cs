@@ -5,7 +5,6 @@ namespace Licitacao.Domain.Interfaces
     {
         Task<T> AddAsync(T entity);
         Task AddListAsync(List<T> entities);
-        Task<bool> DeleteAllByIdAsync(List<Guid> ids);
         Task<bool> DeleteAsync(Guid id);
         Task<List<T>> GetAllAsync();
         Task<T> GetByIdAsync(Guid id);

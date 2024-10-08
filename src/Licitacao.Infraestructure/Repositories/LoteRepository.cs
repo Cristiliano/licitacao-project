@@ -18,5 +18,17 @@ namespace Licitacao.Infraestructure.Repositories
                 .AsNoTracking()
                 .ToListAsync();
         }
+
+        public async Task<bool> DeleteLoteAsync(Guid loteId)
+        {
+            return await context.Lotes
+                .Where(l => l.Id == loteId)
+                    .Include(x => x.Internets)
+                    .Include(x => x.Cotacoes)
+                    .Include(x => x.PrecosPublicos)
+                    .Include(x => x.PrecosEstimados)
+                .AsNoTracking()
+                .ExecuteDeleteAsync() > 0;
+        }
     }
 }
