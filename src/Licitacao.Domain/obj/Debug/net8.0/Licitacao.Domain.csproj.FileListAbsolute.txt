@@ -1,0 +1,12 @@
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\bin\Debug\net8.0\Licitacao.Domain.deps.json
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\bin\Debug\net8.0\Licitacao.Domain.dll
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\bin\Debug\net8.0\Licitacao.Domain.pdb
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\Licitacao.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\Licitacao.Domain.AssemblyInfoInputs.cache
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\Licitacao.Domain.AssemblyInfo.cs
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\Licitacao.Domain.csproj.CoreCompileInputs.cache
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\Licitacao.Domain.sourcelink.json
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\Licitacao.Domain.dll
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\refint\Licitacao.Domain.dll
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\Licitacao.Domain.pdb
+C:\Users\julius.cesar\Documents\Iassepe\licitacao-project\src\Licitacao.Domain\obj\Debug\net8.0\ref\Licitacao.Domain.dll
