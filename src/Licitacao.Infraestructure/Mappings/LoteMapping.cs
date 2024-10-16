@@ -21,6 +21,10 @@ namespace Licitacao.Infraestructure.Mappings
                 .HasMaxLength(50)
                 .IsRequired();
 
+            // Campo NeFisco
+            builder.Property(l => l.NeFisco)
+               .IsRequired();
+
             // Relacionamento 1:N (Lote -> Cotacoes)
             builder.HasMany(l => l.Cotacoes)
                 .WithOne(c => c.Lote)

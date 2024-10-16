@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VUu4RvIPioY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Application\\Licitacao.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Julius\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

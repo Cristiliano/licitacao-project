@@ -1,0 +1,222 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E57949F-CFE0-41BC-BE7A-5CB2BBFE9129}|src\\Licitacao.API\\Licitacao.API.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E57949F-CFE0-41BC-BE7A-5CB2BBFE9129}|src\\Licitacao.API\\Licitacao.API.csproj|solutionrelative:src\\licitacao.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0269EDAC-0872-42AB-B81B-5020A661CC88}|src\\Licitacao.Infraestructure\\Licitacao.Infraestructure.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.infraestructure\\mappings\\lotemapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0269EDAC-0872-42AB-B81B-5020A661CC88}|src\\Licitacao.Infraestructure\\Licitacao.Infraestructure.csproj|solutionrelative:src\\licitacao.infraestructure\\mappings\\lotemapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julius\\AppData\\Local\\SourceServer\\4ce655f171d855c1faa4f1b6043be8dd80329d200f96638c548cdaac95a49e60\\src\\Licitacao.Domain\\Mappers\\LoteMapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julius\\AppData\\Local\\SourceServer\\8786d4a95a636a3321091d862b0e8942d86b3ed088a300343e7701dd695aeec8\\src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\mappers\\lotemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\mappers\\lotemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\entities\\loteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\entities\\loteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\entities\\cotacaoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\entities\\cotacaoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\entities\\nefiscoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\entities\\nefiscoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\entities\\precoestimadoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\entities\\precoestimadoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\entities\\precopublicoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\entities\\precopublicoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|c:\\users\\julius\\documents\\iass\\licitacao-project\\src\\licitacao.domain\\entities\\internetentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4D9052-460F-4C23-B6FA-96329D75B16C}|src\\Licitacao.Domain\\Licitacao.Domain.csproj|solutionrelative:src\\licitacao.domain\\entities\\internetentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.API\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Licitacao.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.API\\appsettings.json",
+              "RelativeToolTip": "src\\Licitacao.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-16T03:23:51.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoteMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\AppData\\Local\\SourceServer\\4ce655f171d855c1faa4f1b6043be8dd80329d200f96638c548cdaac95a49e60\\src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\4ce655f171d855c1faa4f1b6043be8dd80329d200f96638c548cdaac95a49e60\\src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "ToolTip": "C:\\Users\\Julius\\AppData\\Local\\SourceServer\\4ce655f171d855c1faa4f1b6043be8dd80329d200f96638c548cdaac95a49e60\\src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\4ce655f171d855c1faa4f1b6043be8dd80329d200f96638c548cdaac95a49e60\\src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:20:46.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoteMapping.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\AppData\\Local\\SourceServer\\8786d4a95a636a3321091d862b0e8942d86b3ed088a300343e7701dd695aeec8\\src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\8786d4a95a636a3321091d862b0e8942d86b3ed088a300343e7701dd695aeec8\\src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "ToolTip": "C:\\Users\\Julius\\AppData\\Local\\SourceServer\\8786d4a95a636a3321091d862b0e8942d86b3ed088a300343e7701dd695aeec8\\src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\8786d4a95a636a3321091d862b0e8942d86b3ed088a300343e7701dd695aeec8\\src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:20:41.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoteMapping.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "RelativeToolTip": "src\\Licitacao.Infraestructure\\Mappings\\LoteMapping.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAADwvysAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:19:07.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoteMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Mappers\\LoteMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:18:57.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PrecoEstimadoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\PrecoEstimadoEntity.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Entities\\PrecoEstimadoEntity.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\PrecoEstimadoEntity.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Entities\\PrecoEstimadoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:14:55.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NeFiscoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\NeFiscoEntity.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Entities\\NeFiscoEntity.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\NeFiscoEntity.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Entities\\NeFiscoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:14:24.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:11:22.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CotacaoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\CotacaoEntity.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Entities\\CotacaoEntity.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\CotacaoEntity.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Entities\\CotacaoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:11:20.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InternetEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\InternetEntity.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Entities\\InternetEntity.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\InternetEntity.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Entities\\InternetEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:11:18.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoteEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\LoteEntity.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Entities\\LoteEntity.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\LoteEntity.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Entities\\LoteEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:11:17.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PrecoPublicoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\PrecoPublicoEntity.cs",
+              "RelativeDocumentMoniker": "src\\Licitacao.Domain\\Entities\\PrecoPublicoEntity.cs",
+              "ToolTip": "C:\\Users\\Julius\\Documents\\IASS\\licitacao-project\\src\\Licitacao.Domain\\Entities\\PrecoPublicoEntity.cs",
+              "RelativeToolTip": "src\\Licitacao.Domain\\Entities\\PrecoPublicoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:11:07.777Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
