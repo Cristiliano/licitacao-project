@@ -20,6 +20,9 @@ namespace Licitacao.Infraestructure.Mappings
             builder.Property(l => l.UnidadeMedida)
                 .HasMaxLength(50)
                 .IsRequired();
+            builder.Property(e => e.NeFisco)    
+               .HasMaxLength(30)
+               .IsRequired();
 
             // Relacionamento 1:N (Lote -> Cotacoes)
             builder.HasMany(l => l.Cotacoes)
