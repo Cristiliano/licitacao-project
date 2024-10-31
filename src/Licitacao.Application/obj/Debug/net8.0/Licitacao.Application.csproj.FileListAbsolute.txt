@@ -1,0 +1,16 @@
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\bin\Debug\net8.0\Licitacao.Application.deps.json
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\bin\Debug\net8.0\Licitacao.Application.dll
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\bin\Debug\net8.0\Licitacao.Application.pdb
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\bin\Debug\net8.0\Licitacao.Domain.dll
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\bin\Debug\net8.0\Licitacao.Domain.pdb
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.csproj.AssemblyReference.cache
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.AssemblyInfoInputs.cache
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.AssemblyInfo.cs
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.csproj.CoreCompileInputs.cache
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.sourcelink.json
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitaca.A6B59762.Up2Date
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.dll
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\refint\Licitacao.Application.dll
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\Licitacao.Application.pdb
+C:\Users\julius.cesar\Documents\IASSEPE\licitacao-project\src\Licitacao.Application\obj\Debug\net8.0\ref\Licitacao.Application.dll
