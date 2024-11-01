@@ -11,6 +11,7 @@ namespace Licitacao.Domain.Mappers
             return new ()
             {
                 Item = model.Item,
+                NeFisco = model.NeFisco,
                 Quantidade = model.Quantidade,
                 Descricao = model.Descricao,
                 UnidadeMedida = model.UnidadeMedida,
@@ -48,6 +49,7 @@ namespace Licitacao.Domain.Mappers
             return new()
             {
                 Item = model.Item,
+                NeFisco = model.NeFisco,
                 Descricao = model.Descricao,
                 Quantidade = model.Quantidade,
                 UnidadeMedida = model.UnidadeMedida,
@@ -59,6 +61,7 @@ namespace Licitacao.Domain.Mappers
             return new()
             {
                 Id = model.Id,
+                NeFisco = model.NeFisco,
                 Item = model.Item,
                 Quantidade = model.Quantidade,
                 Descricao = model.Descricao,
@@ -104,7 +107,8 @@ namespace Licitacao.Domain.Mappers
         {
             return new()
             {
-                Id = model.Id,  
+                Id = model.Id,
+                NeFisco = model.NeFisco,
                 Item = model.Item,
                 Descricao = model.Descricao,
                 Quantidade = model.Quantidade,
