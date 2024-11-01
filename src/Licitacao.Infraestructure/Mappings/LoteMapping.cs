@@ -13,6 +13,10 @@ namespace Licitacao.Infraestructure.Mappings
             builder.Property(l => l.Item)
                 .IsRequired();
 
+            builder.Property(l => l.NeFisco)
+               .IsRequired();
+
+
             builder.Property(l => l.Descricao)
                 .HasMaxLength(255)
                 .IsRequired(false);

@@ -87,6 +87,9 @@ namespace Licitacao.Infraestructure.Migrations
                     b.Property<int>("Item")
                         .HasColumnType("int");
 
+                    b.Property<int>("NeFisco")
+                        .HasColumnType("int");
+
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 

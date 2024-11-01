@@ -65,27 +65,6 @@ namespace Licitacao.Infraestructure.Repositories
             return true;
         }
 
-        public async Task<bool> DeleteAllByIdAsync(List<Guid> ids)
-        {
-            if (ids.Count == 0) return false;
-
-            List<T> entities = [];
-
-            foreach (var id in ids)
-            {
-                var entity = await _dbSet.FindAsync(id);
-                if (entity != null)
-                {
-                    entities.Add(entity);
-                }
-            }
-
-            if (entities.Count == 0) return false;
-
-            _dbSet.RemoveRange(entities);
-            return true;
-        }
-
         public async Task<T> GetByIdAsync(Guid id)
         {
             var item = await _dbSet.FindAsync(id);
